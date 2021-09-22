@@ -6,15 +6,10 @@ class ArticlePreview {
   ArticlePreview(this.id, this.title, this.imageUrl);
 
   ArticlePreview.fromJson(Map<String, dynamic> json)
-      :
-        id = json['id'],
+      : id = json['id'],
         title = json['title'],
         imageUrl = json['imageUrl'];
 
   Map<String, dynamic> toJson() =>
-      {
-        'id': id,
-        'title': title,
-        'imageUrl': imageUrl
-      };
+      {'id': id, 'title': title, 'imageUrl': imageUrl};
 }

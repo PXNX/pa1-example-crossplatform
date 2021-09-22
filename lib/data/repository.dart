@@ -1,13 +1,13 @@
 import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:pa1_flutter/model/article_detail.dart';
 import 'package:pa1_flutter/model/article_preview.dart';
 
-const String baseUrl  = "https://pa1-server.herokuapp.com/";
+const String baseUrl = "https://pa1-server.herokuapp.com/";
 
 Future<List<ArticlePreview>> fetchPreviews() async {
-  final response = await http.get(
-      Uri.parse('${baseUrl}previews'));
+  final response = await http.get(Uri.parse('${baseUrl}previews'));
 
   if (response.statusCode == 200) {
     Iterable l = json.decode(response.body);
